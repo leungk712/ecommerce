@@ -1,0 +1,5 @@
+@mixin grid($align, $justify) {
+    display: grid;
+    align-items: $align;
+    justify-content: $justify;
+}
