@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #fcf9ea;
+  background-color: #e9e5dd;
   min-height: 100vh;
   width: 100%;
 }
@@ -16,6 +16,7 @@ body {
 header {
   margin: 0 auto;
   height: 10vh;
+  background-color: #89a3b2;
 }
 
 nav {
@@ -56,7 +57,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   padding: 0 1rem;
-  color: #000;
+  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -78,14 +79,22 @@ nav ul li:hover .submenu {
 }
 
 .submenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1rem;
-  padding: 2rem;
   border: 1px solid #000;
-  background-color: #fff;
+  background-color: #89a3b2;
 }
 
 .submenu li:hover {
-  background-color: lightgoldenrodyellow;
+  background-color: #fff;
   cursor: pointer;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -203,7 +212,18 @@ section .company-row {
 }
 
 footer {
-  text-align: center;
+  background-color: #89a3b2;
+  height: 8vh;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .heart {
