@@ -15,6 +15,7 @@ header {
 nav {
     @include grid(center, center);
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
 }
 
 nav ul {
@@ -27,7 +28,7 @@ nav ul {
 nav ul li {
     list-style: none;
     height: 100%;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     position: relative;
     font-weight: 700;
 
@@ -172,4 +173,12 @@ footer {
     color: #98002e;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #98002e;
+}
+
+.cart {
+    color: #83b582;
+}
+
+.share {
+    color: #f6d365;
 }
