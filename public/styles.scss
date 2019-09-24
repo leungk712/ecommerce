@@ -178,6 +178,26 @@ section .company-row {
     cursor: pointer;
 }
 
+.customer-reviews {
+    @include grid(center, center);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.customer-review-card {
+    height: 30vh;
+    text-align: center;
+}
+
+.customer-review-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
 .company-satisfaction {
     background-color: rgba(137, 163, 178, .9);
     padding: 1rem 0;
