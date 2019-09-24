@@ -231,6 +231,11 @@ section .company-row {
   cursor: pointer;
 }
 
+.company-satisfaction {
+  background-color: rgba(137, 163, 178, 0.9);
+  padding: 1rem 0;
+}
+
 .icon {
   font-size: 4rem;
 }
@@ -259,27 +264,59 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   width: 80%;
   margin: 0 auto;
 }
 
 .footer-content {
-  position: relative;
-}
-
-.footer-content ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-grid li {
   list-style: none;
+  line-height: 1.5;
+}
+
+.footer-grid li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-media-grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.social-media-icon {
+  font-size: 2.25rem;
+  padding: .5rem;
+}
+
+.social-media-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .heart {
@@ -294,5 +331,21 @@ footer {
 
 .share {
   color: #f6d365;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.fa-instagram {
+  color: #C13584;
+}
+
+.fa-youtube {
+  color: #c4302b;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -178,9 +178,10 @@ section .company-row {
     cursor: pointer;
 }
 
-// .product-card:hover {
-//     transform: scale(1.05);
-// }
+.company-satisfaction {
+    background-color: rgba(137, 163, 178, .9);
+    padding: 1rem 0;
+}
 
 .icon {
     font-size: 4rem;
@@ -190,32 +191,46 @@ footer {
     background-color: #89a3b2;
     height: 50vh;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(center, center);
 }
 
 .footer-grid {
     @include grid(center, center);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     width: 80%;
     margin: 0 auto;
 }
 
 .footer-content {
-    position: relative;
-}
-
-.footer-content ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include grid(start, center);
 }
 
 .footer-grid li {
     list-style: none;
+    line-height: 1.5;
+}
+
+.footer-grid li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media-grid {
+    @include grid(center, center);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.social-media-icon {
+    font-size: 2.25rem;
+    padding: .5rem;
+}
+
+.social-media-icon:hover {
+    transform: scale(1.1);
 }
 
 .heart {
@@ -230,4 +245,20 @@ footer {
 
 .share {
     color: #f6d365;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #C13584;
+}
+
+.fa-youtube {
+    color: #c4302b;
 }
