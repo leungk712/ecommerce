@@ -1,5 +1,6 @@
 @import 'resets';
 @import 'mixins';
+@import 'variables';
 
 body {
     // background-color: #fcf9ea;
@@ -8,24 +9,25 @@ body {
     width: 100%;
 }
 
+/*===========================
+            HEADER
+  =========================== */
+
 header {
-    margin: 0 auto;
+    @include alignCenter;
     height: 10vh;
-    // background-color: #696464;
     background-color: #89a3b2;
 }
 
 nav {
+    @include alignCenter;
     @include grid(center, center);
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
     width: 80%;
 }
 
 nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(center, center);
     margin: 0;
 }
 
@@ -74,14 +76,14 @@ nav ul li:hover .submenu {
 }
 
 .submenu li:hover {
-    background-color: #fff;
+    background-color: $clr-white;
     cursor: pointer;
     transition: 0.4s ease;
 }
 
 .search-bar {
     display: flex;
-    background: #fff;
+    background: $clr-white;
     border-radius: 10px;
 }
 
@@ -92,12 +94,13 @@ nav ul li:hover .submenu {
     border: none;
     font-size: 1rem;
     font-weight: 700;
+    text-align: left;
 }
 
 .header-icon {
     font-size: 1.25rem;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 2px solid $clr-black;
     padding: 0.5rem;
 }
 
@@ -108,13 +111,12 @@ nav ul li:hover .submenu {
 
 .user-account {
     justify-content: space-evenly;
-    align-items: center;
+    align-items: $center;
 }
 
 .company-title {
     height: 8vh;
-    text-align: center;
-    color: #fff;
+    color: $clr-white;
     font-weight: 700;
     background-color: rgba(137, 163, 178, .9);
     @include flexbox(center, center);
@@ -124,14 +126,6 @@ nav ul li:hover .submenu {
 .main-img {
     background: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') no-repeat center/cover;
     height: 80vh;
-}
-
-section .company-row {
-    @include grid(center, center);
-    grid-template-columns: repeat(3, 1fr);
-    margin: 30px auto;
-    width: 80%;
-    text-align: center;
 }
 
 .product-rows {
@@ -146,8 +140,7 @@ section .company-row {
     padding: 0 .05rem;
     height: 340px;
     width: 325px;
-    border: 2px solid #000;
-    text-align: center;
+    border: 2px solid $clr-black;
     overflow: hidden;
     -webkit-box-shadow: 9px 6px 7px -6px rgba(0,0,0,0.71);
     -moz-box-shadow: 9px 6px 7px -6px rgba(0,0,0,0.71);
@@ -188,10 +181,13 @@ section .company-row {
     cursor: pointer;
 }
 
+/*===========================
+    CUSTOMERS REVIEW SECTION
+  =========================== */
+
 .customer-reviews {
     @include grid(center, center);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
     margin: 30px auto;
     width: 70%;
@@ -199,7 +195,6 @@ section .company-row {
 
 .customer-review-card {
     height: 30vh;
-    text-align: center;
 }
 
 .customer-review-card img {
@@ -213,23 +208,35 @@ section .company-row {
     padding: 1rem 0;
 }
 
-.icon {
-    font-size: 4rem;
+/*===========================
+    COMPANY GUARANTEE SECTION
+  =========================== */
+
+.company-guarantee-section .company-row-grid {
+    @include grid(center, center);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px auto;
+    width: 80%;
 }
+
+/*===========================
+            FOOTER 
+  =========================== */
 
 footer {
     background-color: #89a3b2;
-    height: 50vh;
-    color: #fff;
+    height: 40vh;
+    color: $clr-white;
     @include flexbox(center, center);
 }
 
 .footer-grid {
+    @include alignCenter;
     @include grid(center, center);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-template-rows: 1;
+    grid-gap: 15px;
     width: 80%;
-    margin: 0 auto;
 }
 
 .footer-content-container {
@@ -242,19 +249,22 @@ footer {
 }
 
 .footer-content {
-    text-align: center;
     margin-top: 10px;
 }
-
 
 .footer-grid li {
     list-style: none;
     line-height: 1.5;
 }
 
+.footer-grid li a:hover {
+    cursor: pointer;
+    color: darkblue;
+}
+
 .footer-grid li a {
     text-decoration: none;
-    color: #fff;
+    color: $clr-white;
 }
 
 .social-media-grid {
@@ -263,12 +273,26 @@ footer {
     grid-gap: 3px;
 }
 
+.sub-footer {
+    background-color: #89a3b2;
+    height: 10vh;
+    color: $clr-white;
+}
+
+/*===========================
+        ICONS & COLORS
+  =========================== */
+
 .social-media-icon {
     font-size: 2.5rem;
 }
 
 .social-media-icon:hover {
     transform: scale(1.1);
+}
+
+.company-guarantee-icon {
+    font-size: 4rem;
 }
 
 .heart {

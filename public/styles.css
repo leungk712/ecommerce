@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Muli', sans-serif;
+  text-align: center;
 }
 
 body {
@@ -14,6 +15,9 @@ body {
   width: 100%;
 }
 
+/*===========================
+            HEADER
+  =========================== */
 header {
   margin: 0 auto;
   height: 10vh;
@@ -21,6 +25,7 @@ header {
 }
 
 nav {
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -31,7 +36,6 @@ nav {
           justify-content: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto;
   width: 80%;
 }
 
@@ -123,6 +127,7 @@ nav ul li:hover .submenu {
   border: none;
   font-size: 1rem;
   font-weight: 700;
+  text-align: left;
 }
 
 .header-icon {
@@ -148,7 +153,6 @@ nav ul li:hover .submenu {
 
 .company-title {
   height: 8vh;
-  text-align: center;
   color: #fff;
   font-weight: 700;
   background-color: rgba(137, 163, 178, 0.9);
@@ -172,22 +176,6 @@ nav ul li:hover .submenu {
   height: 80vh;
 }
 
-section .company-row {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  margin: 30px auto;
-  width: 80%;
-  text-align: center;
-}
-
 .product-rows {
   display: -ms-grid;
   display: grid;
@@ -209,7 +197,6 @@ section .company-row {
   height: 340px;
   width: 325px;
   border: 2px solid #000;
-  text-align: center;
   overflow: hidden;
   -webkit-box-shadow: 9px 6px 7px -6px rgba(0, 0, 0, 0.71);
   box-shadow: 9px 6px 7px -6px rgba(0, 0, 0, 0.71);
@@ -252,6 +239,9 @@ section .company-row {
   cursor: pointer;
 }
 
+/*===========================
+    CUSTOMERS REVIEW SECTION
+  =========================== */
 .customer-reviews {
   display: -ms-grid;
   display: grid;
@@ -263,8 +253,6 @@ section .company-row {
           justify-content: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px;
   margin: 30px auto;
   width: 70%;
@@ -272,7 +260,6 @@ section .company-row {
 
 .customer-review-card {
   height: 30vh;
-  text-align: center;
 }
 
 .customer-review-card img {
@@ -286,13 +273,30 @@ section .company-row {
   padding: 1rem 0;
 }
 
-.icon {
-  font-size: 4rem;
+/*===========================
+    COMPANY GUARANTEE SECTION
+  =========================== */
+.company-guarantee-section .company-row-grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 30px auto;
+  width: 80%;
 }
 
+/*===========================
+            FOOTER 
+  =========================== */
 footer {
   background-color: #89a3b2;
-  height: 50vh;
+  height: 40vh;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,6 +310,7 @@ footer {
 }
 
 .footer-grid {
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -316,9 +321,10 @@ footer {
           justify-content: center;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+  grid-gap: 15px;
   width: 80%;
-  margin: 0 auto;
 }
 
 .footer-content-container {
@@ -342,13 +348,17 @@ footer {
 }
 
 .footer-content {
-  text-align: center;
   margin-top: 10px;
 }
 
 .footer-grid li {
   list-style: none;
   line-height: 1.5;
+}
+
+.footer-grid li a:hover {
+  cursor: pointer;
+  color: darkblue;
 }
 
 .footer-grid li a {
@@ -370,6 +380,15 @@ footer {
   grid-gap: 3px;
 }
 
+.sub-footer {
+  background-color: #89a3b2;
+  height: 10vh;
+  color: #fff;
+}
+
+/*===========================
+        ICONS & COLORS
+  =========================== */
 .social-media-icon {
   font-size: 2.5rem;
 }
@@ -377,6 +396,10 @@ footer {
 .social-media-icon:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.company-guarantee-icon {
+  font-size: 4rem;
 }
 
 .heart {
